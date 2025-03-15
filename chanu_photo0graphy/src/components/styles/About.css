@@ -1,0 +1,357 @@
+/* styles/About.css - Enhanced for more responsiveness */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@300;400;500&display=swap');
+
+.about-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f1f1f1;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+/* About specific styling */
+.about-content-wrapper {
+  display: flex;
+  margin-bottom: 60px;
+}
+
+.about-image-container {
+  width: 40%;
+  padding-right: 40px;
+}
+
+.about-image {
+  width: 100%;
+  height: auto;
+  filter: grayscale(20%) contrast(95%) brightness(0.98);
+  transition: all 0.5s ease;
+}
+
+.about-image:hover {
+  filter: grayscale(0%) brightness(1.03);
+}
+
+.about-text-container {
+  width: 60%;
+  padding-left: 40px;
+}
+
+.about-text-container h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem;
+  font-weight: 300;
+  letter-spacing: 0.25rem;
+  margin-bottom: 20px;
+}
+
+.separator {
+  width: 60px;
+  height: 1px;
+  background-color: #333;
+  margin-bottom: 30px;
+}
+
+.about-text p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  letter-spacing: 0.05rem;
+}
+
+.about-text .intro {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+  letter-spacing: 0.05rem;
+  line-height: 1.5;
+}
+
+.about-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  margin: 40px 0;
+  padding-left: 20px;
+  border-left: 1px solid #333;
+}
+
+.about-signature {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-style: italic;
+  margin-top: 40px;
+  text-align: right;
+}
+
+/* Credentials section */
+.credentials-section {
+  margin: 40px 0 60px;
+}
+
+.credentials-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.credential-item {
+  width: 30%;
+}
+
+.credential-item h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.credential-item ul {
+  list-style: none;
+}
+
+.credential-item li {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+  letter-spacing: 0.05rem;
+  line-height: 1.5;
+}
+
+/* Collaborations section */
+.collaborations-section {
+  margin: 40px 0 60px;
+  text-align: center;
+}
+
+.collaborations-section h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 0.25rem;
+  margin-bottom: 20px;
+}
+
+.collaborations-section .separator {
+  margin: 0 auto 30px;
+}
+
+.collaborations-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.collaboration-item {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  padding: 20px 30px;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+}
+
+.collaboration-item:hover {
+  color: #f1f1f1;
+  background-color: #333;
+  border-color: #333;
+}
+
+/* Responsive adjustments - Enhanced */
+@media (max-width: 1200px) {
+  .about-text-container h2 {
+    font-size: 2rem;
+  }
+  
+  .about-text .intro {
+    font-size: 1.1rem;
+  }
+  
+  .about-quote {
+    font-size: 1.2rem;
+  }
+  
+  .collaborations-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .collaboration-item {
+    font-size: 1.1rem;
+    padding: 18px 25px;
+  }
+}
+
+@media (max-width: 992px) {
+  .about-container {
+    padding: 25px;
+  }
+  
+  .about-content-wrapper {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+  
+  .about-image-container,
+  .about-text-container {
+    width: 100%;
+    padding: 0;
+  }
+  
+  .about-image-container {
+    margin-bottom: 40px;
+  }
+  
+  .about-text-container h2 {
+    text-align: center;
+  }
+  
+  .about-text-container .separator {
+    margin: 0 auto 30px;
+  }
+  
+  .credentials-container {
+    flex-direction: column;
+  }
+  
+  .credential-item {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .collaboration-item {
+    padding: 15px 20px;
+  }
+  
+  .collaborations-grid {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    padding: 20px;
+  }
+  
+  .about-text-container h2 {
+    font-size: 1.8rem;
+    letter-spacing: 0.2rem;
+  }
+  
+  .about-text p {
+    font-size: 0.85rem;
+  }
+  
+  .about-text .intro {
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
+  
+  .about-quote {
+    font-size: 1.1rem;
+    margin: 30px 0;
+    padding-left: 15px;
+  }
+  
+  .about-signature {
+    font-size: 1.8rem;
+    margin-top: 30px;
+  }
+  
+  .credential-item h3 {
+    font-size: 1.1rem;
+  }
+  
+  .collaborations-section h2 {
+    font-size: 1.6rem;
+  }
+  
+  .collaboration-item {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-container {
+    padding: 15px;
+  }
+  
+  .about-text-container h2 {
+    font-size: 1.6rem;
+    letter-spacing: 0.15rem;
+  }
+  
+  .separator {
+    width: 50px;
+    margin-bottom: 25px;
+  }
+  
+  .about-text p {
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+  }
+  
+  .about-text .intro {
+    font-size: 0.95rem;
+  }
+  
+  .about-quote {
+    font-size: 1rem;
+    margin: 25px 0;
+  }
+  
+  .about-signature {
+    font-size: 1.6rem;
+  }
+  
+  .credential-item h3 {
+    font-size: 1rem;
+  }
+  
+  .credential-item li {
+    font-size: 0.75rem;
+  }
+  
+  .collaborations-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .collaborations-grid {
+    gap: 15px;
+  }
+  
+  .collaboration-item {
+    font-size: 0.9rem;
+    padding: 12px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-text-container h2 {
+    font-size: 1.5rem;
+  }
+  
+  .about-quote {
+    padding-left: 12px;
+  }
+  
+  .about-signature {
+    font-size: 1.5rem;
+  }
+  
+  .collaborations-section h2 {
+    font-size: 1.4rem;
+  }
+  
+  .collaboration-item {
+    font-size: 0.85rem;
+    padding: 10px 15px;
+  }
+}

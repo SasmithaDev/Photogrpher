@@ -1,0 +1,104 @@
+/* App.css */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@300;400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  background-color: #f1f1f1;
+  color: #333;
+  overflow-x: hidden;
+}
+
+.App {
+  position: relative;
+  overflow: hidden;
+}
+
+section {
+  position: relative;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+}
+
+p {
+  line-height: 1.6;
+}
+
+footer {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 30px 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+footer p {
+  font-size: 0.7rem;
+  letter-spacing: 0.05rem;
+  opacity: 0.7;
+  margin-bottom: 10px;
+}
+
+.developer-credit {
+  font-size: 0.7rem;
+  letter-spacing: 0.05rem;
+  margin: 5px 0 15px;
+}
+
+.developer-credit a {
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.developer-credit a:hover {
+  opacity: 0.7;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.social-links a {
+  color: #333;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  opacity: 0.7;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  footer {
+    padding: 25px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 20px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    padding: 20px 10px;
+  }
+  
+  .social-links a {
+    margin: 0 8px;
+  }
+}

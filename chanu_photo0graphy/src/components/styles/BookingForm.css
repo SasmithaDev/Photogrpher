@@ -1,0 +1,259 @@
+/* styles/BookingForm.css - Enhanced for more responsiveness */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@300;400;500&display=swap');
+
+.booking-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(2px);
+  animation: fadeIn 0.3s ease;
+}
+
+.booking-modal {
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 40px;
+  background-color: #f1f1f1;
+  color: #333;
+  border: 1px solid #ddd;
+  animation: slideUp 0.3s ease;
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  transition: all 0.3s ease;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-button:hover {
+  opacity: 0.7;
+}
+
+.booking-modal h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 0.25rem;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.form-separator {
+  width: 60px;
+  height: 1px;
+  background-color: #333;
+  margin: 0 auto 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  background-color: transparent;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #333;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 12px 30px;
+  margin-top: 10px;
+  background: none;
+  border: 1px solid #333;
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #333;
+  color: #f1f1f1;
+}
+
+.submit-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.success-message,
+.error-message {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.success-message p {
+  color: #2a7d4f;
+}
+
+.error-message p {
+  color: #c53030;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive adjustments - Enhanced */
+@media (max-width: 992px) {
+  .booking-modal {
+    padding: 35px 30px;
+    max-width: 450px;
+  }
+  
+  .booking-modal h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .booking-modal {
+    padding: 30px 25px;
+    width: 95%;
+  }
+  
+  .booking-modal h2 {
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+  }
+  
+  .form-separator {
+    width: 50px;
+    margin-bottom: 25px;
+  }
+  
+  .form-group {
+    margin-bottom: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .booking-modal {
+    padding: 25px 20px;
+  }
+  
+  .close-button {
+    top: 15px;
+    right: 15px;
+  }
+  
+  .booking-modal h2 {
+    font-size: 1.4rem;
+    letter-spacing: 0.15rem;
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    font-size: 0.75rem;
+    margin-bottom: 6px;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+  
+  .submit-button {
+    padding: 10px 25px;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .booking-modal {
+    padding: 20px 15px;
+  }
+  
+  .booking-modal h2 {
+    font-size: 1.3rem;
+  }
+  
+  .form-separator {
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .submit-button {
+    padding: 10px 20px;
+    font-size: 0.7rem;
+  }
+  
+  .close-button svg {
+    width: 20px;
+    height: 20px;
+  }
+}
